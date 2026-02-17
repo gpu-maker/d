@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Texas Hold'em Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="table">
+
+  <div class="opponent-area">
+    <h2>AI Player</h2>
+    <div id="aiCards"></div>
+    <div id="aiChips"></div>
+  </div>
+
+  <div class="center-area">
+    <div id="pot"></div>
+    <div id="community"></div>
+  </div>
+
+  <div class="player-area">
+    <h2>You</h2>
+    <div id="playerCards"></div>
+    <div id="playerChips"></div>
+
+    <div class="controls">
+      <button id="check">Check</button>
+      <button id="call">Call</button>
+      <button id="raise">Raise 50</button>
+      <button id="fold">Fold</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="engine/deck.js"></script>
+<script src="engine/handEvaluator.js"></script>
+<script src="engine/betting.js"></script>
+<script src="engine/ai.js"></script>
+<script src="engine/gameState.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
