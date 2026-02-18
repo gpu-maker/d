@@ -9,6 +9,8 @@ const game={
 function startGame(){
   game.deck=new Deck();
   game.community=[];
+  game.stage="preflop";
+
   game.players=[
     new Player("You"),
     new Player("AI")
