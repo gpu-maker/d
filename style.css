@@ -14,11 +14,7 @@ body {
   padding: 40px;
 }
 
-.center-area {
-  text-align: center;
-}
-
-.player-area, .opponent-area {
+.center-area, .player-area, .opponent-area {
   text-align: center;
 }
 
@@ -39,6 +35,27 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+
+/* CHIP STYLE */
+
+.chip {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 4px dashed white;
+  margin: 2px;
+  box-shadow:
+    inset 0 0 5px rgba(255,255,255,0.5),
+    0 2px 5px rgba(0,0,0,0.6);
+}
+
+#playerChips, #aiChips, #pot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
 }
 
 .controls button {
