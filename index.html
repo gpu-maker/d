@@ -27,10 +27,12 @@
     <div id="playerChips"></div>
 
     <div class="controls">
-      <button id="check">Check</button>
-      <button id="call">Call</button>
-      <button id="raise">Raise 50</button>
-      <button id="fold">Fold</button>
+      <button onclick="playerCheck()">Check</button>
+      <button onclick="playerCall()">Call</button>
+      <button onclick="betAmount(5)">Bet $5</button>
+      <button onclick="betAmount(25)">Bet $25</button>
+      <button onclick="betAmount(100)">Bet $100</button>
+      <button onclick="playerFold()">Fold</button>
     </div>
   </div>
 
@@ -39,6 +41,7 @@
 <script src="engine/deck.js"></script>
 <script src="engine/handEvaluator.js"></script>
 <script src="engine/betting.js"></script>
+<script src="engine/chips.js"></script>
 <script src="engine/ai.js"></script>
 <script src="engine/gameState.js"></script>
 <script src="script.js"></script>
