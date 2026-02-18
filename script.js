@@ -1,11 +1,6 @@
 startGame();
 render();
 
-document.getElementById("check").onclick=playerCheck;
-document.getElementById("call").onclick=playerCall;
-document.getElementById("raise").onclick=playerRaise;
-document.getElementById("fold").onclick=playerFold;
-
 function playerCheck(){
   nextStage();
 }
@@ -16,8 +11,8 @@ function playerCall(){
   nextStage();
 }
 
-function playerRaise(){
-  game.betting.bet(game.players[0],50);
+function betAmount(amount){
+  game.betting.bet(game.players[0],amount);
   aiTurn();
   nextStage();
 }
@@ -76,14 +71,15 @@ function render(){
   renderCards("aiCards",[{},{}]);
   renderCards("community",game.community);
 
-  document.getElementById("pot").textContent="Pot: "+game.betting.pot;
-  document.getElementById("playerChips").textContent="Chips: "+game.players[0].chips;
-  document.getElementById("aiChips").textContent="Chips: "+game.players[1].chips;
+  renderChips("pot", game.betting.pot);
+  renderChips("playerChips", game.players[0].chips);
+  renderChips("aiChips", game.players[1].chips);
 }
 
 function renderCards(id,cards){
   const el=document.getElementById(id);
   el.innerHTML="";
+
   cards.forEach(c=>{
     const d=document.createElement("div");
     d.className="card";
